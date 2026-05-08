@@ -1,0 +1,304 @@
+/* ================= BASE ================= */
+body {
+  margin: 0;
+  font-family: sans-serif;
+  background: #f9f9f9;
+}
+
+/* ================= CONTENEDOR ================= */
+.page-container {
+  background: #f1efeb;
+  min-height: 100vh;
+  max-width: 900px;
+  margin: 0 auto;
+  box-shadow: 0 0 30px rgba(0,0,0,0.05);
+}
+
+@media (max-width: 768px) {
+  .page-container {
+    max-width: 100%;
+  }
+}
+
+/* ================= HERO ================= */
+.hero {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;   /* 👈 clave */
+  align-items: center;
+  gap: 2rem;                 /* 👈 controla separación natural */
+  padding: 2rem 1.5rem;
+  text-align: center;
+}
+
+/* HERO TOP */
+.hero-top h1 {
+  font-size: 1.5rem;
+  font-weight: 500;
+}
+
+/* HERO CENTER */
+.hero-center {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.hero-center h2 {
+  font-size: 2rem;
+  margin: 0;
+}
+
+.hero-center p {
+  margin-top: 0.5rem;
+  font-size: 1rem;
+  letter-spacing: 2px;
+}
+
+/* HERO BOTTOM */
+.hero-bottom {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+/* ================= SECCIONES ================= */
+.section {
+  padding: 3rem 1.5rem;
+}
+
+.center {
+  text-align: center;
+}
+
+/* ================= GRID ================= */
+.grid-2 {
+  display: grid;
+  gap: 1.5rem;
+}
+
+@media (min-width: 768px) {
+  .grid-2 {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+/* ================= TIMELINE ================= */
+.timeline div {
+  display: flex;
+  justify-content: space-between;
+  margin: 0.5rem 0;
+}
+
+/* ================= DRESS CODE ================= */
+.colors {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  margin-top: 1rem;
+}
+
+.color {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  border: 3px solid white;
+}
+
+/* ================= FORM ================= */
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  max-width: 300px;
+  margin: auto;
+}
+
+input, select, button {
+  padding: 0.7rem;
+  font-size: 1rem;
+}
+
+/* ================= CONTADOR ================= */
+.countdown-box {
+  margin-top: 2rem;
+  padding: 1.5rem;
+  border-radius: 15px;
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(6px);
+}
+
+.countdown-values {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  text-align: center;
+}
+
+.countdown-values span {
+  display: block;
+  font-size: 2rem;
+  font-weight: bold;
+}
+
+.countdown-values small {
+  font-size: 0.75rem;
+  opacity: 0.8;
+}
+
+/* ================= MENSAJES ================= */
+.event-message {
+  margin-top: 2rem;
+  font-size: 1.4rem;
+  font-weight: 700;
+  text-align: center;
+  max-width: 500px;
+  margin-left: auto;
+  margin-right: auto;
+  line-height: 1.6;
+  letter-spacing: 0.5px;
+  opacity: 0;
+  animation: fadeUp 0.8s ease forwards;
+}
+
+@media (min-width: 768px) {
+  .event-message {
+    font-size: 1.8rem;
+  }
+}
+
+/* ================= LOADER ================= */
+.loader {
+  margin-top: 2rem;
+  display: flex;
+  justify-content: center;
+  gap: 6px;
+}
+
+.loader span {
+  width: 8px;
+  height: 8px;
+  background: black;
+  border-radius: 50%;
+  animation: blink 1.4s infinite ease-in-out;
+}
+
+.loader span:nth-child(2) {
+  animation-delay: 0.2s;
+}
+
+.loader span:nth-child(3) {
+  animation-delay: 0.4s;
+}
+
+@keyframes blink {
+  0%, 80%, 100% { opacity: 0.2; }
+  40% { opacity: 1; }
+}
+
+/* ================= ANIMACIONES ================= */
+.fade-up {
+  opacity: 0;
+}
+
+.fade-up.show {
+  animation: fadeUp 0.8s ease forwards;
+}
+
+@keyframes fadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(15px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* ================= MUSIC PLAYER ================= */
+.music-player {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  z-index: 1000;
+}
+
+.music-btn {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  background: rgba(0, 0, 0, 0.6);
+  color: white;
+  border: none;
+  padding: 0.6rem 0.9rem;
+  border-radius: 999px;
+  cursor: pointer;
+  backdrop-filter: blur(5px);
+  transition: all 0.3s ease;
+}
+
+.music-btn:hover {
+  background: rgba(0, 0, 0, 0.8);
+}
+
+.music-btn .icon {
+  font-size: 1.2rem;
+}
+
+.music-btn .label {
+  font-size: 0.9rem;
+}
+
+@media (max-width: 768px) {
+  .music-btn .label {
+    display: none;
+  }
+}
+
+/* ================= LOGO ================= */
+.logo-container {
+  display: flex;
+  justify-content: center;
+  padding: 2rem 1rem;
+}
+
+.logo-container img {
+  width: 25%;
+  max-width: 180px;
+  min-width: 120px;
+  height: auto;
+  opacity: 0;
+  transform: translateY(-10px);
+  animation: logoFade 1s ease forwards;
+}
+
+@media (max-width: 768px) {
+  .logo-container img {
+    width: 40%;
+  }
+}
+
+@keyframes logoFade {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.hero-logo {
+  display: flex;
+  justify-content: center;
+}
+
+/* 👇 CLAVE */
+.hero-logo img {
+  width: 50%;
+  max-width: 640px;
+  min-width: 300px;
+  height: auto;
+
+  opacity: 0;
+  transform: translateY(-10px);
+  animation: logoFade 1s ease forwards;
+}
