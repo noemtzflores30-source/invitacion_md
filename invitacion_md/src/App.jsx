@@ -229,8 +229,8 @@ function DressCode() {
       <p>Evitar los siguientes tonos</p>
 
       <div className="colors">
-        <div className="color" style={{ background: "#ccc" }}></div>
-        <div className="color" style={{ background: "#aaa" }}></div>
+        <div className="color" style={{ background: "#61081b" }}></div>
+        <div className="color" style={{ background: "#ffffffc7" }}></div>
         <div className="color" style={{ background: "#888" }}></div>
       </div>
 
